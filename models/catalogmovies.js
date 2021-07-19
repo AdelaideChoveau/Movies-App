@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 // Añadir Schema aquí
 
 const movieSchema = new Schema({
-    name: {
+    title: {
         type: String,
-        required: [true, "Movie needs a name"]
+        required: [true, "Movie needs a title"]
     },
     image: {
         type: String,
@@ -16,9 +16,13 @@ const movieSchema = new Schema({
         type: String,
         required: [true, "Movie needs a summary"]
     },
-    genre: {
+    category: {
         type: String,
-        required: [true, "Movie needs a genre"]
+        required: [true, "Movie needs a category"]
+    },
+    id: {
+        type: Number,
+        required: [true, "Movie needs an id"]
     },
     updated: {
         type: Date,
@@ -26,7 +30,6 @@ const movieSchema = new Schema({
     },
     rating: {
         type: Number,
-        unique: true
     }
 
 })

@@ -1,3 +1,5 @@
+const User = require('../models/userprofile')
+
 exports.displayMyMovies = (req, res, next) => {
     res.status(200).json({mssg: true})
 };
